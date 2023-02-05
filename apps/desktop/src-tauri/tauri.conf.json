@@ -151,7 +151,9 @@
       "windows": {
         "installMode": "passive"
       },
-      "endpoints": []
+      "endpoints": [
+        "https://credo-web-inky.vercel.app/api/update/{{target}}/{{current_version}}"
+      ]
     },
     "windows": [
       {
