@@ -1,7 +1,9 @@
 <script>
+  import Titlebar from "$lib/components/titlebar/Titlebar.svelte";
   import "../app.css";
 </script>
 
-<main class="container">
+<Titlebar />
+<main class="pt-[60px] text-white">
   <slot />
 </main>
