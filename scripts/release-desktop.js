@@ -40,6 +40,8 @@ async function main() {
     await runGitCommand("commit", "-m", `v${version.new}`)
     await runGitCommand("tag", `v${version.new}`)
     await runGitCommand("push", "--tags")
+
+    console.log(`\nsuccessfully release new version '${version.new}'`)
 }
 
 async function bumpNPM(versionType) {
