@@ -1,10 +1,12 @@
 <script lang="ts">
-  import Icon from "@iconify/svelte";
-  import ClientIcon from "@iconify-icons/mdi/invoice";
+  import ClientsIcon from "@iconify-icons/mdi/layers-outline";
+  import PaidIcon from "@iconify-icons/mdi/hand-coin-outline";
+  import InvoicesIcon from "@iconify-icons/mdi/paperclip";
+  import InvoicedIcon from "@iconify-icons/mdi/creation-outline";
   import StatsCard from "$lib/components/stats-card/StatsCard.svelte";
 </script>
 
-<div class="h-full min-h-[800px] py-10 flex flex-col gap-10">
+<div class="h-full min-h-[800px] py-10 flex flex-col gap-10 container mx-auto">
   <div class="flex items-end justify-between">
     <div class="flex flex-col gap-3">
       <h3 class="text-3xl">Overview</h3>
@@ -21,10 +23,10 @@
       >
     </div>
   </div>
-  <div class="grid grid-cols-4 gap-10">
-    <StatsCard label="Clients" value="12" icon={ClientIcon} />
-    <StatsCard label="Invoices" value="14" icon={ClientIcon} />
-    <StatsCard label="Invoiced" value="$ 65.29K" icon={ClientIcon} />
-    <StatsCard label="Paid" value="$ 49.34K" icon={ClientIcon} />
+  <div class="grid grid-cols-2 xl:grid-cols-4 gap-10">
+    <StatsCard label="Clients" value="12" icon={ClientsIcon} />
+    <StatsCard label="Invoices" value="14" icon={InvoicesIcon} />
+    <StatsCard label="Invoiced" value="$ 65.29K" icon={InvoicedIcon} />
+    <StatsCard label="Paid" value="$ 49.34K" icon={PaidIcon} />
   </div>
 </div>

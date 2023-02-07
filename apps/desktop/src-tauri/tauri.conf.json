@@ -162,7 +162,9 @@
         "resizable": true,
         "title": "desktop",
         "width": 800,
-        "decorations": true
+        "decorations": true,
+        "minWidth": 800,
+        "minHeight": 600
       }
     ]
   }
