@@ -47,22 +47,13 @@ export default function Home() {
         </div>
 
         <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+          <div className="flex flex-col items-center justify-center gap-5">
+            <div className="text-6xl text-white uppercase font-bold tracking-widest">
+              Credo
+            </div>
+            <div className="text-lg opacity-60">
+              Invoicing App
+            </div>
           </div>
         </div>
 
@@ -71,8 +62,8 @@ export default function Home() {
             className={styles.card}
             onClick={download}
           >
-            <h2 className={inter.className}>
-              Download
+            <h2 className="text-2xl">
+              Download Latest Version
             </h2>
             <p className={inter.className}>
               Download App for your platform
