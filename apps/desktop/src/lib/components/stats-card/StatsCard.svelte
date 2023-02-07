@@ -13,6 +13,6 @@
   <div class="p-4 rounded-full bg-[#191919] text-[#c2c2c2] block">
     <Icon {icon} width={25} />
   </div>
-  <div class="uppercase text-[#a5a5a5]">{label}</div>
+  <div class="uppercase text-[#cecece] tracking-[0.2em]">{label}</div>
   <div class="text-4xl text-white">{value}</div>
 </div>
