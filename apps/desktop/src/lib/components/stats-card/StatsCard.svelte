@@ -7,9 +7,7 @@
   export let icon: IconifyIcon;
 </script>
 
-<div
-  class="w-full border border-[#232323] rounded-lg p-7 flex flex-col items-start gap-5"
->
+<div class="w-full border rounded-lg p-7 flex flex-col items-start gap-5">
   <div class="p-4 rounded-full bg-[#191919] text-[#c2c2c2] block">
     <Icon {icon} width={25} />
   </div>

@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="border-b border-[#191919] py-3 px-10 flex items-center justify-between z-[999] bg-black"
+	class="border-b py-3 px-10 flex items-center justify-between z-[999] bg-black"
 >
 	<div class="text-white font-bold">CREDO</div>
 	<div class="flex-1 flex items-center justify-center">

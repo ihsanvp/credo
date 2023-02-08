@@ -2,8 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+
+    .border,
+    .border-r,
+    .border-l,
+    .border-t,
+    .border-b,
+    .border-x,
+    .border-y {
+        @apply border-border-light dark:border-border-dark;
+    }
+}
+
 body {
-    @apply w-full h-full bg-black;
+    @apply w-full h-full bg-black select-none;
 }
 
 *::-webkit-scrollbar {

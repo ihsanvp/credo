@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Chip from "../chip/Chip.svelte";
+
   export let client: string;
   export let name: string;
   export let id: string;
@@ -9,9 +11,9 @@
   function statusColor() {
     switch (status) {
       case "pending":
-        return "bg-[#1b1401] text-[#b99c1a]";
+        return "#b99c1a";
       case "paid":
-        return "bg-[#011b09] text-[#1ab935]";
+        return "#1ab935";
       default:
         return "";
     }
@@ -27,9 +29,9 @@
     <div class="text-[#696969]">#{id}</div>
   </div>
   <div class="flex items-center justify-center col-span-2">
-    <div class="py-1 px-5 text-sm rounded-full capitalize {statusColor()}">
+    <Chip color={statusColor()}>
       {status}
-    </div>
+    </Chip>
   </div>
   <div class="flex flex-col gap-1 items-end">
     <div class="">$ {amount.toFixed(2)}</div>

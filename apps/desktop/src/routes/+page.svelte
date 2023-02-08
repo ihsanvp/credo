@@ -80,9 +80,9 @@
       <p class=" text-[#878787]">Here is your stats for today.</p>
     </div>
     <div class="flex items-center justify-center gap-3">
-      <div class="flex border border-[#353535] rounded-md">
+      <div class="flex border rounded-md">
         <button
-          class="py-3 px-5 text-white hover:bg-[#141414] text-sm border-r border-[#353535] flex items-center gap-3"
+          class="py-3 px-5 text-white hover:bg-[#141414] text-sm border-r flex items-center gap-3"
         >
           <Icon icon={CalenderIcon} width={20} />
           <span>Last 30 days</span>
@@ -94,7 +94,7 @@
         </button>
       </div>
       <button
-        class="py-3 px-5 text-white bg-indigo-700 hover:bg-indigo-600 rounded-md text-sm flex items-center gap-2"
+        class="relative py-3 px-5 text-white before:z-[-1] bg-primary before:absolute before:inset-0 before:opacity-0 hover:before:opacity-100 before:blur-lg before:transition-opacity before:duration-300 before:bg-primary-dark rounded-md text-sm flex items-center gap-2"
       >
         <Icon icon={CreateIcon} width={20} />
         <span>Create Invoice</span>
@@ -108,9 +108,7 @@
     <StatsCard label="Paid" value="$ 49.34K" icon={PaidIcon} />
   </div>
   <div class="flex-1 grid xl:grid-cols-2 gap-10 pb-10">
-    <div
-      class="w-full h-full border border-[#232323] rounded-lg py-5 flex flex-col gap-2 px-3"
-    >
+    <div class="w-full h-full border rounded-lg py-5 flex flex-col gap-2 px-3">
       <div class="text-2xl mb-5 px-5 pt-2">Recent Transactions</div>
       <div class="flex-1 flex flex-col">
         {#each transactions as t}
@@ -125,9 +123,7 @@
         {/each}
       </div>
     </div>
-    <div
-      class="w-full h-full border border-[#232323] rounded-lg py-5 flex flex-col gap-2 px-3"
-    >
+    <div class="w-full h-full border rounded-lg py-5 flex flex-col gap-2 px-3">
       <div class="text-2xl mb-5 px-5 pt-2">Recent Projects</div>
       <div class="flex-1 flex flex-col">
         {#each projects as t}
