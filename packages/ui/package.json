@@ -8,9 +8,25 @@
   "license": "MIT",
   "scripts": {
     "lint": "prettier --check --ignore-path=../../.prettierignore . && eslint \".\"",
-    "format": "prettier --write --ignore-path=../../.prettierignore ."
+    "format": "prettier --write --ignore-path=../../.prettierignore .",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "dev": "pnpm storybook"
   },
   "devDependencies": {
-    "svelte": "^3.54.0"
-  }
+    "@storybook/cli": "^6.5.16",
+    "svelte": "^3.55.1",
+    "@storybook/svelte": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "svelte-loader": "^3.1.5",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@babel/core": "^7.20.12",
+    "babel-loader": "^8.3.0"
+  },
+  "dependencies": {}
 }
