@@ -16,7 +16,7 @@
 	"dependencies": {
 		"@tauri-apps/api": "^1.2.0",
 		"color": "^4.2.3",
-		"npm-bump": "^0.0.33"
+		"ui": "workspace:^0.0.0"
 	},
 	"devDependencies": {
 		"@iconify-icons/mdi": "^1.2.41",
