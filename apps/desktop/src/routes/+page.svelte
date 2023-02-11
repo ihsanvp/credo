@@ -102,10 +102,20 @@
     </div>
   </div>
   <div class="grid grid-cols-2 xl:grid-cols-4 gap-10">
-    <StatsCard label="Clients" value="12" icon={ClientsIcon} />
-    <StatsCard label="Invoices" value="14" icon={InvoicesIcon} />
-    <StatsCard label="Invoiced" value="$ 65.29K" icon={InvoicedIcon} />
-    <StatsCard label="Paid" value="$ 49.34K" icon={PaidIcon} />
+    <StatsCard color="#ff5c5c" label="Clients" value="12" icon={ClientsIcon} />
+    <StatsCard
+      color="#b95cff"
+      label="Invoices"
+      value="14"
+      icon={InvoicesIcon}
+    />
+    <StatsCard
+      color="#5c70ff"
+      label="Invoiced"
+      value="$ 65.29K"
+      icon={InvoicedIcon}
+    />
+    <StatsCard color="#ff5cc5" label="Paid" value="$ 49.34K" icon={PaidIcon} />
   </div>
   <div class="flex-1 grid xl:grid-cols-2 gap-10 pb-10">
     <div class="w-full h-full border rounded-lg py-5 flex flex-col gap-2 px-3">
