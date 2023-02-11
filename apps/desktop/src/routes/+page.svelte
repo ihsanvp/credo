@@ -9,6 +9,9 @@
   import CalenderIcon from "@iconify-icons/mdi/calendar-blank-outline";
   import TransactionListCard from "$lib/components/transaction-list-card/TransactionListCard.svelte";
   import Icon from "@iconify/svelte";
+  import PrimaryButton from "$lib/components/button/PrimaryButton.svelte";
+  import ButtonGroup from "$lib/components/button-group/ButtonGroup.svelte";
+  import ButtonGroupBtn from "$lib/components/button-group/ButtonGroupBtn.svelte";
 
   interface Transaction {
     id: string;
@@ -80,25 +83,15 @@
       <p class=" text-[#878787]">Here is your stats for today.</p>
     </div>
     <div class="flex items-center justify-center gap-3">
-      <div class="flex border rounded-md">
-        <button
-          class="py-3 px-5 text-white hover:bg-[#141414] text-sm border-r flex items-center gap-3"
-        >
-          <Icon icon={CalenderIcon} width={20} />
-          <span>Last 30 days</span>
-        </button>
-        <button
-          class="flex items-center justify-center py-3 px-4 hover:bg-[#141414] h-full"
-        >
+      <ButtonGroup>
+        <ButtonGroupBtn leadingIcon={CalenderIcon}>Last 30 days</ButtonGroupBtn>
+        <ButtonGroupBtn>
           <Icon icon={DownIcon} width={20} />
-        </button>
-      </div>
-      <button
-        class="relative py-3 px-5 text-white before:z-[-1] bg-primary before:absolute before:inset-0 before:opacity-0 hover:before:opacity-100 before:blur-lg before:transition-opacity before:duration-300 before:bg-primary-dark rounded-md text-sm flex items-center gap-2"
+        </ButtonGroupBtn>
+      </ButtonGroup>
+      <PrimaryButton asEl="a" href="/invoices/create" leadingIcon={CreateIcon}
+        >Create Invoice</PrimaryButton
       >
-        <Icon icon={CreateIcon} width={20} />
-        <span>Create Invoice</span>
-      </button>
     </div>
   </div>
   <div class="grid grid-cols-2 xl:grid-cols-4 gap-10">

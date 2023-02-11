@@ -13,6 +13,11 @@
     .border-y {
         @apply border-border-light dark:border-border-dark;
     }
+
+    .divide-x,
+    .divide-y {
+        @apply divide-border-light dark:divide-border-dark;
+    }
 }
 
 body {
