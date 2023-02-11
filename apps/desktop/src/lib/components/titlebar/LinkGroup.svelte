@@ -21,7 +21,7 @@
 		},
 	];
 
-	$: activeIndex = links.findIndex((l) => l.href == $page.route.id);
+	$: activeIndex = links.findIndex((l) => l.href == $page.url.pathname);
 </script>
 
 <div class="flex items-center justify-center gap-3">

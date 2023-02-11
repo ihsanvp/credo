@@ -76,8 +76,6 @@
   ];
 
   const projects = [...transactions].reverse();
-
-  async function printWindow() {}
 </script>
 
 <div class="h-full min-h-[800px] flex flex-col gap-10 container mx-auto">
@@ -87,9 +85,6 @@
       <p class=" text-[#878787]">Here is your stats for today.</p>
     </div>
     <div class="flex items-center justify-center gap-3">
-      <SecondaryButton asEl="button" onClick={printWindow}
-        >Print</SecondaryButton
-      >
       <ButtonGroup>
         <ButtonGroupBtn leadingIcon={CalenderIcon}>Last 30 days</ButtonGroupBtn>
         <ButtonGroupBtn>
