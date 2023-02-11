@@ -1,12 +1,10 @@
 <script>
 	import LinkGroup from "./LinkGroup.svelte";
-	import Icon from "@iconify/svelte";
 	import NotificationsIcon from "@iconify-icons/mdi/notifications";
 	import SearchIcon from "@iconify-icons/mdi/search";
-	import { page, navigating } from "$app/stores";
-	import IconButton from "../button/IconButton.svelte";
+	import { page } from "$app/stores";
+	import IconButton from "$lib/components/button/IconButton.svelte";
 	import BackIcon from "@iconify-icons/mdi/arrow-left";
-	import { goto } from "$app/navigation";
 	import { goBack } from "$lib/utils/navigation";
 
 	$: isDeepRoute = ($page.url.pathname.match(/\//gi)?.length || 0) > 1;
