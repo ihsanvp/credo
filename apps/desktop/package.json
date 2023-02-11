@@ -16,6 +16,7 @@
 	"dependencies": {
 		"@tauri-apps/api": "^1.2.0",
 		"color": "^4.2.3",
+		"config": "workspace:^0.0.0",
 		"ui": "workspace:^0.0.0"
 	},
 	"devDependencies": {

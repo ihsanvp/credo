@@ -10,7 +10,7 @@
 </script>
 
 <BaseButton
-  class=" relative rounded-md bg-primary before:z-[-1] before:absolute before:inset-0 before:bg-primary-dark before:opacity-0 hover:before:opacity-100 before:blur-lg before:transition-opacity before:duration-300 "
+  class="relative rounded-md bg-primary before:z-[-1] before:absolute before:inset-0 before:bg-primary-dark before:opacity-0 hover:before:opacity-100 before:blur-lg before:transition-opacity before:duration-300 "
   {asEl}
   {href}
   {onClick}
