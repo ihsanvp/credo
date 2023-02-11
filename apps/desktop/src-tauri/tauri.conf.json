@@ -83,7 +83,7 @@
         "hide": false,
         "maximize": false,
         "minimize": false,
-        "print": false,
+        "print": true,
         "requestUserAttention": false,
         "setAlwaysOnTop": false,
         "setCursorGrab": false,

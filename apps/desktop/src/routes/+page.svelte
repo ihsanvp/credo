@@ -12,6 +12,8 @@
   import PrimaryButton from "$lib/components/button/PrimaryButton.svelte";
   import ButtonGroup from "$lib/components/button-group/ButtonGroup.svelte";
   import ButtonGroupBtn from "$lib/components/button-group/ButtonGroupBtn.svelte";
+  import SecondaryButton from "$lib/components/button/SecondaryButton.svelte";
+  import { WindowManager } from "@tauri-apps/api/window";
 
   interface Transaction {
     id: string;
@@ -74,6 +76,8 @@
   ];
 
   const projects = [...transactions].reverse();
+
+  async function printWindow() {}
 </script>
 
 <div class="h-full min-h-[800px] flex flex-col gap-10 container mx-auto">
@@ -83,6 +87,9 @@
       <p class=" text-[#878787]">Here is your stats for today.</p>
     </div>
     <div class="flex items-center justify-center gap-3">
+      <SecondaryButton asEl="button" onClick={printWindow}
+        >Print</SecondaryButton
+      >
       <ButtonGroup>
         <ButtonGroupBtn leadingIcon={CalenderIcon}>Last 30 days</ButtonGroupBtn>
         <ButtonGroupBtn>
