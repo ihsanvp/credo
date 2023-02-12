@@ -1,11 +1,18 @@
 import type { StorybookConfig } from '@storybook/svelte-vite';
+import fg from "fast-glob"
+import path from "path"
+
+const stories = fg.sync([
+  "../components/**/*.stories.svelte",
+  // "../components/**/*.mdx",
+  // "../components/**/*.stories.@(js|jsx|ts|tsx|svelte)",
+
+  // important!
+  '!**/node_modules'
+], { globstar: true, cwd: path.resolve(__dirname) })
 
 const config: StorybookConfig = {
-  "stories": [
-    "../components/**/*.mdx",
-    "../components/**/*.stories.@(js|jsx|ts|tsx|svelte)",
-    "../components/**/*.stories.svelte"
-  ],
+  "stories": stories,
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",

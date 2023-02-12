@@ -141,15 +141,18 @@ importers:
       '@storybook/addon-essentials': ^7.0.0-beta.46
       '@storybook/addon-interactions': ^7.0.0-beta.46
       '@storybook/addon-links': ^7.0.0-beta.46
-      '@storybook/addon-svelte-csf': ^2.0.11
+      '@storybook/addon-svelte-csf': ^3.0.0-next.3
       '@storybook/blocks': ^7.0.0-beta.46
-      '@storybook/preview-web': ^6.5.16
+      '@storybook/preview-web': ^7.0.0-beta.46
       '@storybook/svelte': ^7.0.0-beta.46
       '@storybook/svelte-vite': ^7.0.0-beta.46
       '@storybook/testing-library': ^0.0.14-next.1
+      '@storybook/theming': ^7.0.0-beta
       '@sveltejs/vite-plugin-svelte': ^2.0.2
       '@tsconfig/svelte': ^3.0.0
+      '@types/react': 18.0.27
       cva: npm:class-variance-authority@^0.4.0
+      fast-glob: ^3.2.12
       react: ^18.2.0
       react-dom: ^18.2.0
       storybook: ^7.0.0-beta.46
@@ -159,6 +162,7 @@ importers:
       tslib: ^2.5.0
       typescript: ^4.9.3
       vite: ^4.1.0
+      webpack: ^5.75.0
     dependencies:
       '@iconify/svelte': 3.1.0_svelte@3.55.1
       cva: /class-variance-authority/0.4.0_typescript@4.9.5
@@ -167,14 +171,17 @@ importers:
       '@storybook/addon-essentials': 7.0.0-beta.46_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-interactions': 7.0.0-beta.46_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-links': 7.0.0-beta.46_biqbaboplfbrettd7655fr4n2y
-      '@storybook/addon-svelte-csf': 2.0.11_jnrvapdraeual5mie5nejqof7y
+      '@storybook/addon-svelte-csf': 3.0.0-next.3_4pfqt5vpradx6bm6ewncsxr6ni
       '@storybook/blocks': 7.0.0-beta.46_biqbaboplfbrettd7655fr4n2y
-      '@storybook/preview-web': 6.5.16_biqbaboplfbrettd7655fr4n2y
+      '@storybook/preview-web': 7.0.0-beta.46
       '@storybook/svelte': 7.0.0-beta.46_svelte@3.55.1
       '@storybook/svelte-vite': 7.0.0-beta.46_jpauyvbrjmqmlxhfgzv45zaizm
       '@storybook/testing-library': 0.0.14-next.1
+      '@storybook/theming': 7.0.0-beta.46_biqbaboplfbrettd7655fr4n2y
       '@sveltejs/vite-plugin-svelte': 2.0.2_svelte@3.55.1+vite@4.1.1
       '@tsconfig/svelte': 3.0.0
+      '@types/react': 18.0.27
+      fast-glob: 3.2.12
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       storybook: 7.0.0-beta.46
@@ -183,6 +190,7 @@ importers:
       tslib: 2.5.0
       typescript: 4.9.5
       vite: 4.1.1
+      webpack: 5.75.0
 
 packages:
 
@@ -3105,19 +3113,31 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/addon-svelte-csf/2.0.11_jnrvapdraeual5mie5nejqof7y:
-    resolution: {integrity: sha512-sBOqZaXv60uWa0b7jubJ+FQ5JbckgvNsBw+ucd/s3304BeTKG4ZUel+yJEjpt0ebZqty8xWchBZev1htxBVD/Q==}
+  /@storybook/addon-svelte-csf/3.0.0-next.3_4pfqt5vpradx6bm6ewncsxr6ni:
+    resolution: {integrity: sha512-0KvlvQBGJGWQeV7S78tnOYWP9ZkIwiaXuoZziQKUMv/Lhk0eGEvs/kT0ipOUKgfnvujsb/Hpz1MXcHOqcoC+2A==}
     peerDependencies:
-      '@storybook/svelte': '>=6.4.20'
-      svelte: ^3.46.6
+      '@storybook/svelte': ^7.0.0-beta
+      '@storybook/theming': ^7.0.0-beta
+      '@sveltejs/vite-plugin-svelte': ^1.0.0 || ^2.0.0
+      svelte: ^3.50.0
       svelte-loader: ^3.1.2
+      vite: ^3.0.0 || ^4.0.0
     peerDependenciesMeta:
+      '@sveltejs/vite-plugin-svelte':
+        optional: true
       svelte-loader:
         optional: true
+      vite:
+        optional: true
     dependencies:
+      '@babel/runtime': 7.20.13
       '@storybook/svelte': 7.0.0-beta.46_svelte@3.55.1
+      '@storybook/theming': 7.0.0-beta.46_biqbaboplfbrettd7655fr4n2y
+      '@sveltejs/vite-plugin-svelte': 2.0.2_svelte@3.55.1+vite@4.1.1
+      magic-string: 0.26.7
       svelte: 3.55.1
       ts-dedent: 2.2.0
+      vite: 4.1.1
     dev: true
 
   /@storybook/addon-toolbars/6.5.16:
@@ -3231,27 +3251,6 @@ packages:
       regenerator-runtime: 0.13.11
     dev: true
 
-  /@storybook/addons/6.5.16_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-p3DqQi+8QRL5k7jXhXmJZLsE/GqHqyY6PcoA1oNTJr0try48uhTGUOYkgzmqtDaa/qPFO5LP+xCPzZXckGtquQ==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      '@storybook/api': 6.5.16_biqbaboplfbrettd7655fr4n2y
-      '@storybook/channels': 6.5.16
-      '@storybook/client-logger': 6.5.16
-      '@storybook/core-events': 6.5.16
-      '@storybook/csf': 0.0.2--canary.4566f4d.1
-      '@storybook/router': 6.5.16_biqbaboplfbrettd7655fr4n2y
-      '@storybook/theming': 6.5.16_biqbaboplfbrettd7655fr4n2y
-      '@types/webpack-env': 1.18.0
-      core-js: 3.27.2
-      global: 4.4.0
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      regenerator-runtime: 0.13.11
-    dev: true
-
   /@storybook/addons/6.5.16_wcqkhtmu7mswc6yz4uyexck3ty:
     resolution: {integrity: sha512-p3DqQi+8QRL5k7jXhXmJZLsE/GqHqyY6PcoA1oNTJr0try48uhTGUOYkgzmqtDaa/qPFO5LP+xCPzZXckGtquQ==}
     peerDependencies:
@@ -3291,33 +3290,6 @@ packages:
       global: 4.4.0
       lodash: 4.17.21
       memoizerific: 1.11.3
-      regenerator-runtime: 0.13.11
-      store2: 2.14.2
-      telejson: 6.0.8
-      ts-dedent: 2.2.0
-      util-deprecate: 1.0.2
-    dev: true
-
-  /@storybook/api/6.5.16_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-HOsuT8iomqeTMQJrRx5U8nsC7lJTwRr1DhdD0SzlqL4c80S/7uuCy4IZvOt4sYQjOzW5fOo/kamcoBXyLproTA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      '@storybook/channels': 6.5.16
-      '@storybook/client-logger': 6.5.16
-      '@storybook/core-events': 6.5.16
-      '@storybook/csf': 0.0.2--canary.4566f4d.1
-      '@storybook/router': 6.5.16_biqbaboplfbrettd7655fr4n2y
-      '@storybook/semver': 7.3.2
-      '@storybook/theming': 6.5.16_biqbaboplfbrettd7655fr4n2y
-      core-js: 3.27.2
-      fast-deep-equal: 3.1.3
-      global: 4.4.0
-      lodash: 4.17.21
-      memoizerific: 1.11.3
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
       regenerator-runtime: 0.13.11
       store2: 2.14.2
       telejson: 6.0.8
@@ -4554,32 +4526,6 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /@storybook/preview-web/6.5.16_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-IJnvfe2sKCfk7apN9Fu9U8qibbarrPX5JB55ZzK1amSHVmSDuYk5MIMc/U3NnSQNnvd1DO5v/zMcGgj563hrtg==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      '@storybook/addons': 6.5.16_biqbaboplfbrettd7655fr4n2y
-      '@storybook/channel-postmessage': 6.5.16
-      '@storybook/client-logger': 6.5.16
-      '@storybook/core-events': 6.5.16
-      '@storybook/csf': 0.0.2--canary.4566f4d.1
-      '@storybook/store': 6.5.16_biqbaboplfbrettd7655fr4n2y
-      ansi-to-html: 0.6.15
-      core-js: 3.27.2
-      global: 4.4.0
-      lodash: 4.17.21
-      qs: 6.11.0
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      regenerator-runtime: 0.13.11
-      synchronous-promise: 2.0.17
-      ts-dedent: 2.2.0
-      unfetch: 4.2.0
-      util-deprecate: 1.0.2
-    dev: true
-
   /@storybook/preview-web/6.5.16_wcqkhtmu7mswc6yz4uyexck3ty:
     resolution: {integrity: sha512-IJnvfe2sKCfk7apN9Fu9U8qibbarrPX5JB55ZzK1amSHVmSDuYk5MIMc/U3NnSQNnvd1DO5v/zMcGgj563hrtg==}
     peerDependencies:
@@ -4606,6 +4552,15 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
+  /@storybook/preview-web/7.0.0-beta.46:
+    resolution: {integrity: sha512-2gMEkpvleHXoTX5zygUU3t/QBlH7waY5LRk1OuuCXr/JVGLvVIGBLo+85U81LW9fSak7jWnorh6ebjuit57VvQ==}
+    dependencies:
+      '@storybook/client-logger': 7.0.0-beta.46
+      '@storybook/preview-api': 7.0.0-beta.46
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@storybook/preview/7.0.0-beta.46:
     resolution: {integrity: sha512-4k62e85sR6Cyl0O7ZeCct/pE0v+tjIjGhHDs9U0AZbfBJlSppazRAP51q6v1QdF2eWDgdRbn3oTQnW8rdCBeMg==}
     dev: true
@@ -4620,21 +4575,6 @@ packages:
       core-js: 3.27.2
       memoizerific: 1.11.3
       qs: 6.11.0
-      regenerator-runtime: 0.13.11
-    dev: true
-
-  /@storybook/router/6.5.16_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-ZgeP8a5YV/iuKbv31V8DjPxlV4AzorRiR8OuSt/KqaiYXNXlOoQDz/qMmiNcrshrfLpmkzoq7fSo4T8lWo2UwQ==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      '@storybook/client-logger': 6.5.16
-      core-js: 3.27.2
-      memoizerific: 1.11.3
-      qs: 6.11.0
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
       regenerator-runtime: 0.13.11
     dev: true
 
@@ -4708,31 +4648,6 @@ packages:
       global: 4.4.0
       lodash: 4.17.21
       memoizerific: 1.11.3
-      regenerator-runtime: 0.13.11
-      slash: 3.0.0
-      stable: 0.1.8
-      synchronous-promise: 2.0.17
-      ts-dedent: 2.2.0
-      util-deprecate: 1.0.2
-    dev: true
-
-  /@storybook/store/6.5.16_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-g+bVL5hmMq/9cM51K04e37OviUPHT0rHHrRm5wj/hrf18Kd9120b3sxdQ5Dc+HZ292yuME0n+cyrQPTYx9Epmw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      '@storybook/addons': 6.5.16_biqbaboplfbrettd7655fr4n2y
-      '@storybook/client-logger': 6.5.16
-      '@storybook/core-events': 6.5.16
-      '@storybook/csf': 0.0.2--canary.4566f4d.1
-      core-js: 3.27.2
-      fast-deep-equal: 3.1.3
-      global: 4.4.0
-      lodash: 4.17.21
-      memoizerific: 1.11.3
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
       regenerator-runtime: 0.13.11
       slash: 3.0.0
       stable: 0.1.8
@@ -4941,20 +4856,6 @@ packages:
       '@storybook/client-logger': 6.5.16
       core-js: 3.27.2
       memoizerific: 1.11.3
-      regenerator-runtime: 0.13.11
-    dev: true
-
-  /@storybook/theming/6.5.16_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-hNLctkjaYLRdk1+xYTkC1mg4dYz2wSv6SqbLpcKMbkPHTE0ElhddGPHQqB362md/w9emYXNkt1LSMD8Xk9JzVQ==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      '@storybook/client-logger': 6.5.16
-      core-js: 3.27.2
-      memoizerific: 1.11.3
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
       regenerator-runtime: 0.13.11
     dev: true
 
