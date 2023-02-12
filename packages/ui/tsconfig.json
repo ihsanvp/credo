@@ -19,9 +19,10 @@
     "./**/*.d.ts",
     "./**/*.ts",
     "./**/*.js",
-    "./**/*.svelte"
+    "./**/*.svelte",
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "svelte.config.js"
   ]
 }

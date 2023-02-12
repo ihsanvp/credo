@@ -17,7 +17,7 @@
     "prettier": "latest"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=14.0.0 <16.19.0"
   },
   "packageManager": "pnpm@7.26.0",
   "dependencies": {
