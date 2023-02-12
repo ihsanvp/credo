@@ -165,7 +165,8 @@
         "width": 800,
         "decorations": true,
         "minWidth": 800,
-        "minHeight": 600
+        "minHeight": 600,
+        "visible": false
       }
     ]
   }
