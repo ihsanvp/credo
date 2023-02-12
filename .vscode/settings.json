@@ -12,5 +12,11 @@
             "**/apps/desktop/**",
             "**/packages/ui/**",
         ]
-    }
+    },
+    "tailwindCSS.experimental.classRegex": [
+        [
+            "cva\\(([^)]*)\\)",
+            "[\"'`]([^\"'`]*).*?[\"'`]"
+        ]
+    ]
 }

@@ -10,12 +10,9 @@ module.exports = {
   ],
   "framework": "@storybook/svelte",
   "core": {
-    "builder": "@storybook/builder-webpack5"
+    "builder": "@storybook/builder-vite"
   },
-  async webpackFinal(config) {
-    config.module.rules.push({
-      resolve: { fullySpecified: false },
-    })
-    return config;
-  },
+  "features": {
+    "storyStoreV7": true
+  }
 }
