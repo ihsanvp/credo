@@ -17,6 +17,9 @@ module.exports = {
           light: Color(primaryColor).lighten(0.2).hex(),
           dark: Color(primaryColor).darken(0.2).hex()
         },
+        secondary: {
+          DEFAULT: Color("#ffffff").darken(0.9).string()
+        },
         border: {
           dark: Color("#ffffff").alpha(0.2).string(),
           light: Color("#000000").alpha(0.2).string()

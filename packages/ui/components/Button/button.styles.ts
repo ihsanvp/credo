@@ -1,11 +1,11 @@
 import { cva, type VariantProps } from "cva";
 import { twMerge } from "tailwind-merge";
 
-const button = cva(["px-5", "py-2"], {
+const button = cva(["px-7", "py-3"], {
   variants: {
     type: {
-      solid: ["text-white"],
-      outline: ["bg-transparent", "text-white", "border"]
+      solid: ["text-white", "rounded-md"],
+      outline: ["bg-transparent", "text-white", "border", "rounded-md"]
     },
     level: {
       primary: "",
@@ -25,6 +25,11 @@ const button = cva(["px-5", "py-2"], {
       level: "primary",
       type: "solid",
       class: ["bg-primary"]
+    },
+    {
+      level: "secondary",
+      type: "solid",
+      class: ["bg-secondary"]
     },
     {
       level: "danger",
@@ -56,7 +61,7 @@ const button = cva(["px-5", "py-2"], {
   ],
   defaultVariants: {
     type: "solid",
-    level: "primary",
+    level: "secondary",
     size: "medium"
   }
 })

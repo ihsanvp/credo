@@ -1,10 +1,34 @@
 <script>
-  import { Meta, Story } from "@storybook/addon-svelte-csf";
+  import { Meta, Story, Template } from "@storybook/addon-svelte-csf";
   import Button from "./Button.svelte";
 </script>
 
-<Meta title="Components/General/Button" component={Button} />
+<Meta
+  title="Components/General/Button"
+  component={Button}
+  argTypes={{
+    level: {
+      options: ["primary", "secondary"],
+      control: { type: "radio" },
+      defaultValue: "primary",
+    },
+  }}
+/>
 
-<Story name="Primary">
-  <Button>Click Me</Button>
-</Story>
+<Template let:args>
+  <Button {...args}>Hello</Button>
+</Template>
+
+<Story
+  name="Solid"
+  args={{
+    type: "solid",
+  }}
+/>
+
+<Story
+  name="Outline"
+  args={{
+    type: "outline",
+  }}
+/>
