@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { IconVariants } from "./icon.styles";
+  import { styles, type IconVariants } from "./icon.styles";
   import type { IconifyIcon } from "@iconify/svelte";
   import Icon from "@iconify/svelte";
 
@@ -7,7 +7,9 @@
     icon: IconifyIcon;
   };
 
-  export let { icon } = $$restProps;
+  export let icon: IconifyIcon;
 </script>
 
-<Icon {icon} width={20} />
+<div class={styles($$restProps)}>
+  <Icon {icon} width={20} />
+</div>

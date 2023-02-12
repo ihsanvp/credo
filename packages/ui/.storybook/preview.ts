@@ -1,6 +1,14 @@
+import "../base.css"
+
 export const parameters = {
   backgrounds: {
-    default: 'light',
+    default: 'dark',
+    values: [
+      {
+        name: "dark",
+        value: "#000000"
+      }
+    ]
   },
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {

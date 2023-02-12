@@ -5,8 +5,9 @@ const primaryColor = "#1f12ff"
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/**/*.{html,js,svelte,ts}',
-    "../../packages/ui/**/*.{html,js,svelte,ts}"
+    "./src/**/*.{html,js,svelte,ts}",
+    "../../packages/ui/**/*.{html,js,svelte,ts}",
+    "./components/**/*.{html,js,svelte,ts}"
   ],
   theme: {
     extend: {

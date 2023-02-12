@@ -6,5 +6,5 @@
 <Meta title="Components/General/Button" component={Button} />
 
 <Story name="Primary">
-  <Button />
+  <Button>Click Me</Button>
 </Story>

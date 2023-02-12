@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .border,
+    .border-r,
+    .border-l,
+    .border-t,
+    .border-b,
+    .border-x,
+    .border-y {
+        @apply border-border-light dark:border-border-dark;
+    }
+
+    .divide-x,
+    .divide-y {
+        @apply divide-border-light dark:divide-border-dark;
+    }
+}
